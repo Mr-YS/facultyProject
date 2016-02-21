@@ -1,0 +1,9 @@
+html {
+  font-family: Ubuntu;
+  font-size: 25px;
+}
+
+#msgbox {
+  height:600px ;
+  overflow-y:scroll;
+}
