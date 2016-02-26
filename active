@@ -92,30 +92,44 @@
 			<div class="" style="height:10px;background:white"></div>
 			<ul class="collapsible collapsible-accordion">
                                 <li>
-                                <a class="collapsible-header waves-effect waves-yellow" style="font-size:20px"><b>Part Two</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <a class="collapsible-header waves-effect waves-red" style="font-size:20px"><b>Part Two</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <div class="collapsible-body">
                                 <ul>
                                         <li><a href="#!" style="font-size:20px">Exploration</a></li>
                                         <li><a href="#!" style="font-size:20px">Investigaion</a></li>
-                                        <li><a href="#!" style="font-size:20px">Small Conclusion</a></li>
-                                </ul>
-                                </div>
-                                </li>
-                        </ul>
-                        </li>
-                        </li>
-  		</ul>
-		<a class="btn-floating btn-large blue lighten-1 waves-effect waves-light red button-collapse" data-activates="slide-out" style="bottom:3%;left:2%;position:fixed"><i class="material-icons">menu</i></a>
-		<script>
-			$(document).ready(function(){
-				$('.scrollspy').scrollSpy();
-			});
-			$(".button-collapse").sideNav({
-				menuWidth : 240		
-			});
-			$(document).ready(function(){
-      				$('.slider').slider({full_width: true});
-    			});
+						<li><a href="#!" style="font-size:20px">Small Conclusion</a></li>
+					</ul>
+					</div>
+					</li>
+				</ul>
+				</li>
+				</li>
+			</ul>
+			<a class="btn-floating btn-large  waves-effect waves-light red button-collapse" data-activates="slide-out" style="bottom:3%;left:2%;position:fixed"><i class="material-icons">menu</i></a>
+			<script>
+				$(document).ready(function(){
+					$('.scrollspy').scrollSpy();
+				});
+				$(".button-collapse").sideNav({
+					menuWidth : 240		
+				});
+				$(document).ready(function(){
+					$('.slider').slider({full_width: true});
+				});
+				$table = $('<table>');
+				$thead = $('<thead>');
+				$tbody = $('<tbody>');
+				for(var i = 0; i < 10; ++i) {
+					$tr = $('<tr>');
+ 					for(var j = 0; j < 10; ++j) {
+  						$td = $('<td>');
+  						$tr.append($td);
+ 					}
+ 					$tbody.append($tr);
+				}
+				$table.append($thead);
+				$table.append($tbody);
+				$('body').append($table);
 		</script>
 	</body>
 </html>
