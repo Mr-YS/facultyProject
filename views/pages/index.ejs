@@ -43,15 +43,12 @@
 				</li>
 			</ul>
 		</div>
+		<div class="white" style="height:100px;"></div>
 		<div class="row">
-			<div class="col s2">
-				<div class="blue lighten-1"></div>
-			</div>
-			<div class="col s8">
-				<h1>Introduction</h1>
+			<div class="col s12 blue lighten-1">
+				<h1 class="col s8 offset-3"style="color:white;">INTRODUCTION</h1>
 			</div>
 		</div>
-		<div class="divider"></div>
 		<ul id="slide-out" class="side-nav">
 			 <nav>
     				<div class="nav-wrapper blue lighten-1">
@@ -84,8 +81,9 @@
                                 <a class="collapsible-header waves-effect waves-dark" style="font-size:20px;"><b>Part One</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <div class="collapsible-body">
                                 <ul>
-                                        <li><a href="#!" style="font-size:20px">Exploration</a></li>
-                                        <li><a href="#!" style="font-size:20px">Investigation</a></li>
+                                        <li><a href="#!" style="font-size:20px">Bar Sprites</a></li>
+                                        <li><a href="#!" style="font-size:20px">Cross Sprites</a></li>
+                                        <li><a href="#!" style="font-size:20px">ROT.Cross Sprites</a></li>
                                         <li><a href="#!" style="font-size:20px">Small Conclusion</a></li>
                             	</ul>
                                 </div>
@@ -97,20 +95,56 @@
                                 <a class="collapsible-header waves-effect waves-dark" style="font-size:20px;"><b>Part Two</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
                                 <div class="collapsible-body">
                                 <ul>
-                                        <li><a href="#!" style="font-size:20px">Exploration</a></li>
-                                        <li><a href="#!" style="font-size:20px">Investigaion</a></li>
-                                        <li><a href="#!" style="font-size:20px">Small Conclusion</a></li>
+                                        <li><a href="#!" style="font-size:20px">Main Theme</a></li>
+                                        <li><a href="#!" style="font-size:20px">Symmetry(x-axis)</a></li>
+                                        <li><a href="#!" style="font-size:20px">Symmetry(y-axis)</a></li>
+                                        <li><a href="#!" style="font-size:20px">Symmetry(origin)</a></li>
+					<li><a href="#!" style="font-size:20px">Symmetry(y=x)</a></li>
+					<li><a href="#!" style="font-size:20px">Symmetry(y=-x)</a></li>
+					<li><a href="#!" style="font-size:20px">Similarity</a></li>
+					<li><a href="#!" style="font-size:20px">Rotation(90dgs)</a></li>
+					<li><a href="#!" style="font-size:20px">Symmetry(y=ax)</a></li>
+					<li><a href="#!" style="font-size:20px">Rotation(a)</a></li>
+					<li><a href="#!" style="font-size:20px">Small Conclusion</a></li>
                                 </ul>
                                 </div>
                                 </li>
                         </ul>
                         </li>
+			<div class="" style="height:10px;background:white"></div>
+			<ul class="collapsible collapsible-accordion">
+                                <li>
+                                <a class="collapsible-header waves-effect waves-dark" style="font-size:20px;"><b>Conclusion</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <div class="collapsible-body">
+                                <ul>
+                                        <li><a href="#!" style="font-size:20px">Conclusion</a></li>
+                                        <li><a href="#!" style="font-size:20px">Evaluation</a></li>
+                                </ul>
+                                </div>
+                                </li>
+                        </ul>
+			<div class="" style="height:10px;background:white"></div>
+			<ul class="collapsible collapsible-accordion">
+                                <li>
+                                <a class="collapsible-header waves-effect waves-dark" style="font-size:20px;"><b>Others</b><i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                <div class="collapsible-body">
+                                <ul>
+                                        <li><a href="#!" style="font-size:20px">Interesting Facts</a></li>
+                                        <li><a href="#!" style="font-size:20px">Introductary Video</a></li>
+                                        <li><a href="#!" style="font-size:20px">Personal INFO.</a></li>
+                                        <li><a href="#!" style="font-size:20px">Timetable(FAC)</a></li>
+                                        <li><a href="#!" style="font-size:20px">Working Process</a></li>
+                                        <li><a href="#!" style="font-size:20px">Git Hub</a></li>
+                                </ul>
+                                </div>
+                                </li>
+                        </ul>
                         </li>
   		</ul>
 		<a class="btn-floating btn-large blue lighten-1 waves-effect waves-light red button-collapse" data-activates="slide-out" style="bottom:3%;left:2%;position:fixed"><i class="material-icons">menu</i></a>
-		<div class="fixed-action-btn horizontal" style="bottom: 45px; right: 24px;">
-    			<a class="btn-floating btn-large red">
-    	  			<i class="large material-icons">mode_edit</i>
+		<div class="fixed-action-btn horizontal" style="bottom:3%;right:2%;">
+    			<a class="btn-floating btn-large blue lighten-1">
+    	  			<i class="large material-icons">settings</i>
     			</a>
     			<ul>
       				<li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
@@ -118,7 +152,7 @@
      	 			<li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
       				<li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
     			</ul>
-  </div>
+		</div>
 		<script>
 			// initializations ( below ):
 			$(document).ready(function(){
@@ -140,6 +174,7 @@
   					$td = $('<td>');
 					$td.attr('id','barSprite_'+i+'_'+j);
   					$tr.append($td);
+					$td.html(i*10+j+1);
  				}
  				$tbody.append($tr);
 			}
@@ -148,10 +183,64 @@
 			$('body').append($table);
 			// Getting ID of 10 by 10 grid above (below):
 			$('#table td').mouseover(function() {
-  				var id = $(this).attr('id');
-  				var row = id.split('_')[1];
-  				var col = id.split('_')[2];
+  				var barSpriteId = $(this).attr('id');
+				var barSpriteName = barSpriteId.split('_')[0];
+  				var barSpriteRow = barSpriteId.split('_')[1];
+  				var barSpriteCol = id.split('_')[2];
 			});
+			$table = $('<table>');
+                        $thead = $('<thead>');
+                        $tbody = $('<tbody>');
+                        for(var i = 0; i < 10; ++i) {
+                                $tr = $('<tr>');
+                                for(var j = 0; j < 10; ++j) {
+                                        $td = $('<td>');
+                                        $td.attr('id','crossSprite_'+i+'_'+j);
+                                        $tr.append($td);
+                                        $td.html(i*10+j+1);
+                                }
+                                $tbody.append($tr);
+                        }
+                        $table.append($thead);
+                        $table.append($tbody);
+                        $('body').append($table);
+                        // Getting ID of 10 by 10 grid above (below):
+                        $('#table td').mouseover(function() {
+                                var crossSpriteId = $(this).attr('id');
+                                var crossSpriteName = crossSpriteId.split('_')[0];
+                                var crossSpriteRow = crossSpriteId.split('_')[1];
+                                var crossSpriteCol = crossSpriteId.split('_')[2];
+                        });
+			// Getting ID of 10 by 10 grid above (below):
+                        $('#table td').mouseover(function() {
+                                var barSpriteId = $(this).attr('id');
+                                var barSpriteName = barSpriteId.split('_')[0];
+                                var barSpriteRow = barSpriteId.split('_')[1];
+                                var barSpriteCol = id.split('_')[2];
+                        });
+                        $table = $('<table>');
+                        $thead = $('<thead>');
+                        $tbody = $('<tbody>');
+                        for(var i = 0; i < 10; ++i) {
+                                $tr = $('<tr>');
+                                for(var j = 0; j < 10; ++j) {
+                                        $td = $('<td>');
+                                        $td.attr('id','rcrossSprite_'+i+'_'+j);
+                                        $tr.append($td);
+                                        $td.html(i*10+j+1);
+                                }
+                                $tbody.append($tr);
+                        }
+                        $table.append($thead);
+                        $table.append($tbody);
+                        $('body').append($table);
+                        // Getting ID of 10 by 10 grid above (below):
+                        $('#table td').mouseover(function() {
+                                var rcrossSpriteId = $(this).attr('id');
+                                var rcrossSpriteName = rcrossSpriteId.split('_')[0];
+                                var rcrossSpriteRow = rcrossSpriteId.split('_')[1];
+                                var rcrossSpriteCol = rcrossSpriteId.split('_')[2];
+                        });
 		</script>
 	</body>
 </html>
