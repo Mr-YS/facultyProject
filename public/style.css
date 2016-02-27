@@ -1,4 +1,35 @@
 #msgbox {
-  height:600px ;
-  overflow-y:scroll;
+	height:600px ;
+	overflow-y:scroll;
+}
+.side-nav li.active, .side-nav li.hover {
+	background-color: #42a5f5;
+}
+table {
+	width: initial;
+	margin: 0 auto;
+}
+table, tr, td {
+	text-align: center;
+	border:1.5px solid black;
+}
+
+td {
+	width: 60px;
+	height: 60px;
+}
+.slider .indicators .indicator-item.active {
+	background-color: #42a5f5;
+}
+/*
+table:hover {
+	background-color: #ef5350;
+}
+
+tr:hover {
+	background-color: #ef5350;
+}
+*/
+td:hover {
+	background-color: #ef5350; 
 }
