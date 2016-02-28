@@ -3,7 +3,7 @@
 }
 table {
 	width: initial;
-	margin: 0 auto;
+//	margin: 0 auto;
 }
 table, tr, td {
 	text-align: center;
@@ -39,6 +39,9 @@ td {
 	top: 50px;
 }
 
+.center {
+	margin : 0 auto;
+}
 p {
 	font-size:14px;
 	color:#757575;

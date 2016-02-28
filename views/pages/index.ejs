@@ -160,11 +160,48 @@
 					As an extension mathematical task, in other word, part two, the 9 different transformations of the sprites on the coordinates instead of grid
 					will be introduced and shows a change of total in before transformation and after.</blockquote> </p>
 		</div>
+		<div class="divider"></div>
 		<h3>Plan</h3>
 		<div id="plan" class="section scrollspy">
 		</div>
+		<div class="divider"></div>
 		<h2 id="partone" class="section scrollspy">Part 1</h2>
-		<div id="bst" class="section scrollspy">
+		<h4 class="section scrollspy">Bar Sprite</h4>
+		<div id="bstt" class="section scrollspy">
+		</div>
+		<div id="bstt" class="section scrollspy">
+			<p>	<blockquote> A bar sprite is the simplest and the most basic form of sprite. It is composed of 1 pivot and 2 other numbers in the shape of bar.
+			The relationsihp between 'pivot' and 'total' is<b>[p represents the value of pivot]</b> p + (p-10) + (p+10) = 3n in the case
+			of bar sprites on the 10 by 10 table(same gaps between numbers). However, the number 10 can be changed by changing the size(number of rows and column) of the table.
+			For example, total is p + (p-13) + (p+13) = 3n on the 13 by 13 table. Moreover, as you may notice, the total of bar sprites is possible to be
+			expressed as 3 * p when the number of rows of the table and the number of columns of the table are equal.
+			</table> </blockquote> </p>
+		</div>
+		<h4 class="section scrollspy">Cross Sprite</h4>
+		<div id="cst" class="section scrollspy">
+		</div>
+		<div id="cstt" class="section scrollspy">
+			<p>	<blockquote> A cross sprite is an upgraded version of bar sprites. As the table above presents, it has one pivot and 4 other numbers.
+			The relationsihp between 'pivot' and 'total' in the cross sprite is<b>[p represents the value of pivot]</b> p + (p-10) + (p+10) + (p+1) + (p-1)
+			which is equal to 5p on the 10 by 10 table with equal gap between each numbers on the table. However, the number 10 can be changed by changing the size(number of rows and column) of the table and number 1 can be
+			changed due to different gap between numbers on the table. For instance, when the table size is 11 by 11, and there are only even numbers written
+			on the table, the total will be expressed as<b>p + (p-2) + (p+2) + (p+11) + (p-11) = 5p</b>. The further features of the cross sprite will
+			be discussed in the 'small conclusion' session at the end of part one.
+			</table> </blockquote> </p>
+		</div>
+		<h4 class="section scrollspy">Rotated-Cross Sprite</h4>
+		<div id="rcst" class="section scrollspy">
+		</div>
+		<div id="rcstt" class="section scrollspy">
+			<p>	<blockquote> A rotated-cross sprite is the next form of cross bar sprite. This is formed by rotating the cross sprite in 45 degrees.
+				The relationship between 'pivot' and 'total' in this sprite is<b>[p represents the value of pivot]</b> p + (p-11) + (p-11) + (p-9) + (p+9) = 5p
+				on the 10 by 10 table with equal gap between each numbrers. As same as cross sprites, constant terms are able to be different due to
+				different grid size and irregular gaps between numbers on the table. More features of the rotated-cross sprites will be mentioned in <thead>
+				'small conclusion' session.
+				</thead>
+			</table> </blockquote> </p>
+		</div>
+		<div id="poconc" class="section scrollspy">
 			<p>	<blockquote> A bar sprite is the simplest and the most basic form of sprite. It is composed of 1 pivot and 2 other numbers in the shape of bar.
 			The relationsihp between 'pivot' and 'total' is<b>[p represents the value of pivot]</b> p + (p-10) + (p+10) = 3n in the case
 			of bar sprites on the 10 by 10 table. However, the number 10 can be changed by changing the size(number of rows and column) of the table.
@@ -179,10 +216,10 @@
 			<li><a href="#introductaryParagraph">Introductary Paragraph</a></li>
 			<li><a href="#plan">Investigaion Plan</a></li>
 			<li><a href="#partone" class="theme" style="color:#ffca28;">Part One</a></li>
-			<li><a href="#bst">Bar Sprites</a></li>
-			<li><a href="#initialization">Cross Sprites</a></li>
-			<li><a href="#initialization">Rotated-Cross Sprites</a></li>
-			<li><a href="#initialization">Small Conclusion</a></li>
+			<li><a href="#bstt">Bar Sprites</a></li>
+			<li><a href="#cstt">Cross Sprites</a></li>
+			<li><a href="#rcstt">Rotated-Cross Sprites</a></li>
+			<li><a href="#poconc">Small Conclusion</a></li>
 			<li><a href="#initialization" class="theme" style="color:#ffca28">Part Two</a></li>
 			<li><a href="#initialization">Introductary Paragraph for Extension</a></li>
 			<li><a href="#initialization">Symmetry/Reflection (x-axis)</a></li>
@@ -277,7 +314,7 @@ for(var i = 0; i < 10; ++i) {
 }
 $table.append($thead);
 $table.append($tbody);
-$('body').append($table);
+$('#cst').append($table);
 // Getting ID of 10 by 10 grid above (below):
 $('#crossSpriteTable td').mouseover(function() {
 	var crossSpriteId = $(this).attr('id');
@@ -322,7 +359,7 @@ for(var i = 0; i < 10; ++i) {
 }
 $table.append($thead);
 $table.append($tbody);
-$('body').append($table);
+$('#rcst').append($table);
 // Getting ID of 10 by 10 grid above (below):
 $('#rcrossSpriteTable td').mouseover(function() {
 	var rcrossSpriteId = $(this).attr('id');
