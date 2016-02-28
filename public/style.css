@@ -1,7 +1,3 @@
-#msgbox {
-	height:600px ;
-	overflow-y:scroll;
-}
 .side-nav li.active, .side-nav li.hover {
 	background-color: #42a5f5;
 }
@@ -21,15 +17,24 @@ td {
 .slider .indicators .indicator-item.active {
 	background-color: #42a5f5;
 }
-/*
-table:hover {
-	background-color: #ef5350;
+
+.table-of-contents a.active {
+	border-left: 4px solid #42a5f5;
 }
 
-tr:hover {
-	background-color: #ef5350;
+.table-of-contents a:hover {
+	border-left: 2px solid #bdbdbd;
 }
-*/
-td:hover {
-	background-color: #ef5350; 
+
+.table-of-contents a.theme.active {
+	border-left: 4px solid #ffca28;
+}
+
+.table-of-contents a.theme:hover {
+	border-left: 2px solid #ffca28;
+}
+
+.table-of-contents {
+	position: fixed;
+	top:50px; 
 }
