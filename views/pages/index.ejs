@@ -162,20 +162,24 @@
 		</div>
 		<h3>Plan</h3>
 		<div id="plan" class="section scrollspy">
-
 		</div>
-
-		<div id="initialization" class="section scrollspy">
-			<p>Content </p>
+		<h2 id="partone" class="section scrollspy">Part 1</h2>
+		<div id="bst" class="section scrollspy">
+			<p>	<blockquote> A bar sprite is the simplest and the most basic form of sprite. It is composed of 1 pivot and 2 other numbers in the shape of bar.
+			The relationsihp between 'pivot' and 'total' is<b>[p represents the value of pivot]</b> p + (p-10) + (p+10) = 3n in the case
+			of bar sprites on the 10 by 10 table. However, the number 10 can be changed by changing the size(number of rows and column) of the table.
+			For example, total is p + (p-13) + (p+13) = 3n on the 13 by 13 table. Moreover, as you may notice, the total of bar sprites is possible to be
+			expressed as 3 * p when the number of rows of the table and the number of columns of the table are equal.
+			</table> </blockquote> </p>
 		</div>
 	</div>
 	<div class="col hide-on-small-only 3 offset-s9 fixed">
 		<ul class="section table-of-contents">
 			<li><a href="#introduction" class="theme" style="color:#ffca28;">Introduction</a></li>
 			<li><a href="#introductaryParagraph">Introductary Paragraph</a></li>
-			<li><a href="#initialization">Investigaion Plan</a></li>
-			<li><a href="#initialization" class="theme" style="color:#ffca28;">Part One</a></li>
-			<li><a href="#initialization">Bar Sprites</a></li>
+			<li><a href="#plan">Investigaion Plan</a></li>
+			<li><a href="#partone" class="theme" style="color:#ffca28;">Part One</a></li>
+			<li><a href="#bst">Bar Sprites</a></li>
 			<li><a href="#initialization">Cross Sprites</a></li>
 			<li><a href="#initialization">Rotated-Cross Sprites</a></li>
 			<li><a href="#initialization">Small Conclusion</a></li>
@@ -229,7 +233,7 @@ for(var i = 0; i < 10; ++i) {
 }
 $table.append($thead);
 $table.append($tbody);
-$('body').append($table);
+$('#bst').append($table);
 // Getting ID of 10 by 10 grid above (below):
 $('#barSpriteTable td').mouseover(function() {
 	var barSpriteId = $(this).attr('id');
