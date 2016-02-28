@@ -189,155 +189,155 @@
 										<li><a href="#initialization">Evaluation</a></li>
 										<li><a href="#initialization" class="theme" style="color:#ffca28">Others</a></li>
 									</ul>
-								</div>
-						  </div>
-								<script>
-									// initializations ( below ):
-									$(document).ready(function(){
-										$('.scrollspy').scrollSpy();
-									});
-									$(".button-collapse").sideNav({
-										menuWidth : 240
-									});
-									$(document).ready(function(){
-										$('.slider').slider({full_width: true});
-									});
-									// Bar Sprites
-									// 10 by 10 grid making code ( below ):
-									$table = $('<table>');
-									$table.attr('id','barSpriteTable');
-									$thead = $('<thead>');
-									$tbody = $('<tbody>');
-									for(var i = 0; i < 10; ++i) {
-										$tr = $('<tr>');
-										for(var j = 0; j < 10; ++j) {
-											$td = $('<td>');
-											$td.attr('id','barSprite_'+i+'_'+j);
-											$tr.append($td);
-											$td.html(i*10+j+1);
-										}
-										$tbody.append($tr);
-									}
-									$table.append($thead);
-									$table.append($tbody);
-									$('body').append($table);
-									// Getting ID of 10 by 10 grid above (below):
-									$('#barSpriteTable td').mouseover(function() {
-										var barSpriteId = $(this).attr('id');
-										var barSpriteName = barSpriteId.split('_')[0];
-										var barSpriteRow = parseInt(barSpriteId.split('_')[1]);
-										var barSpriteCol = barSpriteId.split('_')[2];
-										if(barSpriteRow != 0 && barSpriteRow != 9) {
-											$('#'+barSpriteName+'_'+(barSpriteRow+1)+'_'+barSpriteCol).css('background-color', '#42a5f5');
-											$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', '#ef5350');
-											$('#'+barSpriteName+'_'+(barSpriteRow-1)+'_'+barSpriteCol).css('background-color', '#42a5f5');
-										}
-										else {
-											$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', '#bdbdbd');
-										}
-									});
-									//Clearing up the table
-									$('#barSpriteTable td').mouseleave(function() {
-										var barSpriteId = $(this).attr('id');
-										var barSpriteName = barSpriteId.split('_')[0];
-										var barSpriteRow = parseInt(barSpriteId.split('_')[1]);
-										var barSpriteCol = barSpriteId.split('_')[2];
-										$('#'+barSpriteName+'_'+(barSpriteRow+1)+'_'+barSpriteCol).css('background-color', 'white');
-										$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', 'white');
-										$('#'+barSpriteName+'_'+(barSpriteRow-1)+'_'+barSpriteCol).css('background-color', 'white');
-									});
-									// End of Bar Sprites
-									// 10 by 10 grid making code ( below ) (Cross Sprites):
-							$table = $('<table>');
-							$table.attr('id','crossSpriteTable');
-							$thead = $('<thead>');
-							$tbody = $('<tbody>');
-							for(var i = 0; i < 10; ++i) {
-								$tr = $('<tr>');
-								for(var j = 0; j < 10; ++j) {
-									$td = $('<td>');
-									$td.attr('id','crossSprite_'+i+'_'+j);
-									$tr.append($td);
-									$td.html(i*10+j+1);
-								}
-								$tbody.append($tr);
-							}
-							$table.append($thead);
-							$table.append($tbody);
-							$('body').append($table);
-							// Getting ID of 10 by 10 grid above (below):
-							$('#crossSpriteTable td').mouseover(function() {
-								var crossSpriteId = $(this).attr('id');
-								var crossSpriteName = crossSpriteId.split('_')[0];
-								var crossSpriteRow = parseInt(crossSpriteId.split('_')[1]);
-								var crossSpriteCol = parseInt(crossSpriteId.split('_')[2]);
-								if(crossSpriteRow != 0 && crossSpriteRow != 9 && crossSpriteCol != 0 && crossSpriteCol != 9) {
-									$('#'+crossSpriteName+'_'+(crossSpriteRow+1)+'_'+crossSpriteCol).css('background-color', '#42a5f5');
-									$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', '#ef5350');
-									$('#'+crossSpriteName+'_'+(crossSpriteRow-1)+'_'+crossSpriteCol).css('background-color', '#42a5f5');
-									$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol+1)).css('background-color', '#42a5f5');
-									$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(+crossSpriteCol-1)).css('background-color', '#42a5f5');
-								}
-								else {
-									$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', '#bdbdbd');
-								}
-							});
-							$('#crossSpriteTable td').mouseleave(function() {
-								var crossSpriteId = $(this).attr('id');
-								var crossSpriteName = crossSpriteId.split('_')[0];
-								var crossSpriteRow = parseInt(crossSpriteId.split('_')[1]);
-								var crossSpriteCol = parseInt(crossSpriteId.split('_')[2]);
-								$('#'+crossSpriteName+'_'+(crossSpriteRow+1)+'_'+crossSpriteCol).css('background-color', 'white');
-								$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', 'white');
-								$('#'+crossSpriteName+'_'+(crossSpriteRow-1)+'_'+crossSpriteCol).css('background-color', 'white');
-								$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol-1)).css('background-color', 'white');
-								$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol+1)).css('background-color', 'white');
-							});
-							$table = $('<table>');
-							$table.attr('id','rcrossSpriteTable');
-							$thead = $('<thead>');
-							$tbody = $('<tbody>');
-							for(var i = 0; i < 10; ++i) {
-								$tr = $('<tr>');
-								for(var j = 0; j < 10; ++j) {
-									$td = $('<td>');
-									$td.attr('id','rcrossSprite_'+i+'_'+j);
-									$tr.append($td);
-									$td.html(i*10+j+1);
-								}
-								$tbody.append($tr);
-								}
-							$table.append($thead);
-							$table.append($tbody);
-							$('body').append($table);
-							// Getting ID of 10 by 10 grid above (below):
-							$('#rcrossSpriteTable td').mouseover(function() {
-								var rcrossSpriteId = $(this).attr('id');
-								var rcrossSpriteName = rcrossSpriteId.split('_')[0];
-								var rcrossSpriteRow = parseInt(rcrossSpriteId.split('_')[1]);
-								var rcrossSpriteCol = parseInt(rcrossSpriteId.split('_')[2]);
-								if(rcrossSpriteRow != 0 && rcrossSpriteRow != 9 && rcrossSpriteCol != 0 && rcrossSpriteCol != 9) {
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(rcrossSpriteCol+1)).css('background-color', '#42a5f5');
-								$('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', '#ef5350');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol+1)).css('background-color', '#42a5f5');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol-1)).css('background-color', '#42a5f5');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(+rcrossSpriteCol-1)).css('background-color', '#42a5f5');
-							}
-							else {
-								$('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', '#bdbdbd');
-							}
-							});
-							$('#rcrossSpriteTable td').mouseleave(function() {
-								var rcrossSpriteId = $(this).attr('id');
-								var rcrossSpriteName = rcrossSpriteId.split('_')[0];
-								var rcrossSpriteRow = parseInt(rcrossSpriteId.split('_')[1]);
-								var rcrossSpriteCol = parseInt(rcrossSpriteId.split('_')[2]);
+						</div>
+				</div>
+				<script>
+				// initializations ( below ):
+				$(document).ready(function(){
+					$('.scrollspy').scrollSpy();
+				});
+				$(".button-collapse").sideNav({
+					menuWidth : 240
+				});
+				$(document).ready(function(){
+					$('.slider').slider({full_width: true});
+				});
+				// Bar Sprites
+				// 10 by 10 grid making code ( below ):
+				$table = $('<table>');
+				$table.attr('id','barSpriteTable');
+				$thead = $('<thead>');
+				$tbody = $('<tbody>');
+				for(var i = 0; i < 10; ++i) {
+					$tr = $('<tr>');
+					for(var j = 0; j < 10; ++j) {
+						$td = $('<td>');
+						$td.attr('id','barSprite_'+i+'_'+j);
+						$tr.append($td);
+						$td.html(i*10+j+1);
+					}
+					$tbody.append($tr);
+				}
+				$table.append($thead);
+				$table.append($tbody);
+				$('body').append($table);
+				// Getting ID of 10 by 10 grid above (below):
+				$('#barSpriteTable td').mouseover(function() {
+					var barSpriteId = $(this).attr('id');
+					var barSpriteName = barSpriteId.split('_')[0];
+					var barSpriteRow = parseInt(barSpriteId.split('_')[1]);
+					var barSpriteCol = barSpriteId.split('_')[2];
+					if(barSpriteRow != 0 && barSpriteRow != 9) {
+						$('#'+barSpriteName+'_'+(barSpriteRow+1)+'_'+barSpriteCol).css('background-color', '#42a5f5');
+						$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', '#ef5350');
+						$('#'+barSpriteName+'_'+(barSpriteRow-1)+'_'+barSpriteCol).css('background-color', '#42a5f5');
+					}
+					else {
+						$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', '#bdbdbd');
+					}
+				});
+				//Clearing up the table
+				$('#barSpriteTable td').mouseleave(function() {
+					var barSpriteId = $(this).attr('id');
+					var barSpriteName = barSpriteId.split('_')[0];
+					var barSpriteRow = parseInt(barSpriteId.split('_')[1]);
+					var barSpriteCol = barSpriteId.split('_')[2];
+					$('#'+barSpriteName+'_'+(barSpriteRow+1)+'_'+barSpriteCol).css('background-color', 'white');
+					$('#'+barSpriteName+'_'+barSpriteRow+'_'+barSpriteCol).css('background-color', 'white');
+					$('#'+barSpriteName+'_'+(barSpriteRow-1)+'_'+barSpriteCol).css('background-color', 'white');
+				});
+				// End of Bar Sprites
+				// 10 by 10 grid making code ( below ) (Cross Sprites):
+				$table = $('<table>');
+				$table.attr('id','crossSpriteTable');
+				$thead = $('<thead>');
+				$tbody = $('<tbody>');
+				for(var i = 0; i < 10; ++i) {
+					$tr = $('<tr>');
+					for(var j = 0; j < 10; ++j) {
+						$td = $('<td>');
+						$td.attr('id','crossSprite_'+i+'_'+j);
+						$tr.append($td);
+						$td.html(i*10+j+1);
+					}
+					$tbody.append($tr);
+				}
+				$table.append($thead);
+				$table.append($tbody);
+				$('body').append($table);
+				// Getting ID of 10 by 10 grid above (below):
+				$('#crossSpriteTable td').mouseover(function() {
+					var crossSpriteId = $(this).attr('id');
+					var crossSpriteName = crossSpriteId.split('_')[0];
+					var crossSpriteRow = parseInt(crossSpriteId.split('_')[1]);
+					var crossSpriteCol = parseInt(crossSpriteId.split('_')[2]);
+					if(crossSpriteRow != 0 && crossSpriteRow != 9 && crossSpriteCol != 0 && crossSpriteCol != 9) {
+						$('#'+crossSpriteName+'_'+(crossSpriteRow+1)+'_'+crossSpriteCol).css('background-color', '#42a5f5');
+						$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', '#ef5350');
+						$('#'+crossSpriteName+'_'+(crossSpriteRow-1)+'_'+crossSpriteCol).css('background-color', '#42a5f5');
+						$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol+1)).css('background-color', '#42a5f5');
+						$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(+crossSpriteCol-1)).css('background-color', '#42a5f5');
+					}
+					else {
+						$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', '#bdbdbd');
+					}
+				});
+				$('#crossSpriteTable td').mouseleave(function() {
+					var crossSpriteId = $(this).attr('id');
+					var crossSpriteName = crossSpriteId.split('_')[0];
+					var crossSpriteRow = parseInt(crossSpriteId.split('_')[1]);
+					var crossSpriteCol = parseInt(crossSpriteId.split('_')[2]);
+					$('#'+crossSpriteName+'_'+(crossSpriteRow+1)+'_'+crossSpriteCol).css('background-color', 'white');
+					$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+crossSpriteCol).css('background-color', 'white');
+					$('#'+crossSpriteName+'_'+(crossSpriteRow-1)+'_'+crossSpriteCol).css('background-color', 'white');
+					$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol-1)).css('background-color', 'white');
+					$('#'+crossSpriteName+'_'+crossSpriteRow+'_'+(crossSpriteCol+1)).css('background-color', 'white');
+				});
+				$table = $('<table>');
+        $table.attr('id','rcrossSpriteTable');
+        $thead = $('<thead>');
+        $tbody = $('<tbody>');
+        for(var i = 0; i < 10; ++i) {
+                $tr = $('<tr>');
+                for(var j = 0; j < 10; ++j) {
+                        $td = $('<td>');
+                        $td.attr('id','rcrossSprite_'+i+'_'+j);
+                        $tr.append($td);
+                        $td.html(i*10+j+1);
+                }
+                $tbody.append($tr);
+        }
+        $table.append($thead);
+        $table.append($tbody);
+        $('body').append($table);
+        // Getting ID of 10 by 10 grid above (below):
+        $('#rcrossSpriteTable td').mouseover(function() {
+                var rcrossSpriteId = $(this).attr('id');
+                var rcrossSpriteName = rcrossSpriteId.split('_')[0];
+                var rcrossSpriteRow = parseInt(rcrossSpriteId.split('_')[1]);
+                var rcrossSpriteCol = parseInt(rcrossSpriteId.split('_')[2]);
+                if(rcrossSpriteRow != 0 && rcrossSpriteRow != 9 && rcrossSpriteCol != 0 && rcrossSpriteCol != 9) {
+                        $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(rcrossSpriteCol+1)).css('background-color', '#42a5f5');
+                        $('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', '#ef5350');
+                        $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol+1)).css('background-color', '#42a5f5');
+                        $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol-1)).css('background-color', '#42a5f5');
+                        $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(+rcrossSpriteCol-1)).css('background-color', '#42a5f5');
+                }
+                else {
+                        $('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', '#bdbdbd');
+                }
+        });
+        $('#rcrossSpriteTable td').mouseleave(function() {
+                var rcrossSpriteId = $(this).attr('id');
+                var rcrossSpriteName = rcrossSpriteId.split('_')[0];
+                var rcrossSpriteRow = parseInt(rcrossSpriteId.split('_')[1]);
+                var rcrossSpriteCol = parseInt(rcrossSpriteId.split('_')[2]);
 								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(rcrossSpriteCol+1)).css('background-color', 'white');
-								$('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', 'white');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol+1)).css('background-color', 'white');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol-1)).css('background-color', 'white');
-								$('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(+rcrossSpriteCol-1)).css('background-color', 'white');
-							});
+                $('#'+rcrossSpriteName+'_'+rcrossSpriteRow+'_'+rcrossSpriteCol).css('background-color', 'white');
+                $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol+1)).css('background-color', 'white');
+                $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow-1)+'_'+(rcrossSpriteCol-1)).css('background-color', 'white');
+                $('#'+rcrossSpriteName+'_'+(rcrossSpriteRow+1)+'_'+(+rcrossSpriteCol-1)).css('background-color', 'white');
+        });
 				</script>
 		</body>
 </html>
