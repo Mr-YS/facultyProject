@@ -36,5 +36,18 @@ td {
 
 .table-of-contents {
 	position: fixed;
-	top:50px; 
+	top:50px;
+}
+
+p {
+	font-size:14px;
+	color:#757575;
+}
+
+h4, h3 {
+	color:#212121;
+}
+
+h2 {
+	color:#42a5f5;
 }
