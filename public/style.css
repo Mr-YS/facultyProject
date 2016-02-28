@@ -38,6 +38,9 @@ td {
 	top: 450px;
 }
 
+img {
+	width : 400px;
+}
 .center {
 	margin : 0 auto;
 }
