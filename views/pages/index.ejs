@@ -297,20 +297,79 @@
 		</div>
 		<div class="divider"></div>
 		<h4 class="section scrollspy">Symmetry Rotation (θ degrees)</h4>
-		<div id="loman" class="section scrollspy">
+		<div id="rota" class="section scrollspy">
 			<img src="./faculty11.png" >
 			<p>	<blockquote>BEFORE : Total=mp+X-Yw<br>
 			AFTER : Total=mp+(Xcos(θ)-Ysin(θ))-(Xsin(θ)+Ycos(θ))w<br>
 			-> [HOW?] The formula of rotation/transformation to solve this : (X,Y) -> ((Xcos(θ)-Ysin(θ))
-,(Xsin(θ)+Ycos(θ)))<br>++ If X-Yw = (Xcos(θ)-Ysin(θ))-(Xsin(θ)+Ycos(θ))w </blockquote> </p>
+,(Xsin(θ)+Ycos(θ)))<br><b>++ If X-Yw = (Xcos(θ)-Ysin(θ))-(Xsin(θ)+Ycos(θ))w</b> </blockquote> </p>
 		</div>
 		<div class="divider"></div>
-		<h2 class="section scrollspy">Conclusion & Evaluation</h2>
+		<h2 id="conclusion" class="section scrollspy">Conclusion & Evaluation</h2>
 		<div class="divider"></div>
+		<h4 class="section scrollspy">Conclusion</h4>
+		<div id="conc" class="section scrollspy">
+			<table class="highlight bordered centered">
+			 <thead>
+				 <tr>
+						 <th data-field="type">Transformation</th>
+						 <th data-field="totalafter">Total After Transformation</th>
+						 <th data-field="condition">The Condition of Unchanged Total</th>
+				 </tr>
+			 </thead>
+			 <tbody>
+				 <tr>
+					 <td>x-axis Symmetry / Reflection</td>
+					 <td>mp+X+Yw</td>
+					 <td>-Yw = Yw , Y = 0</td>
+				 </tr>
+				 <tr>
+					 <td>y-axis Symmetry / Reflection</td>
+					 <td>mp-X-Yw</td>
+					 <td>X = -X , X = 0</td>
+				 </tr>
+				 <tr>
+					 <td>origin Symmetry / Reflection</td>
+					 <td>mp-X+Yw</td>
+					 <td>X-Yw = -X+Yw</td>
+				 </tr>
+				 <tr>
+					 <td>y=x Symmetry / Reflection</td>
+					 <td>mp-Y-Xw</td>
+					 <td>X-Yw = Y-Xw</td>
+				 </tr>
+				 <tr>
+					 <td>y=-x Symmetry / Reflection</td>
+					 <td>mp-Y+Xw</td>
+					 <td>X-Yw = Y+Xw</td>
+				 </tr>
+				 <tr>
+					 <td>Similarity in Ration of i : k </td>
+					 <td>mp+kX-kYw</td>
+					 <td>X-Yw = kX-kYw</td>
+				 </tr>
+				 <tr>
+					 <td>Rotation in 90 degrees</td>
+					 <td>mp-Y-Xw</td>
+					 <td>X-Yw = -Y-Xw</td>
+				 </tr>
+				 <tr>
+					 <td>y=ax Symmetry / Reflection</td>
+					 <td>mp+(1/(a^2+1)){(1-a^2)*X+(2aY)}-(1/(a^2+1))(2aX+(-1+a^2)Y)</td>
+					 <td>X-Yw = (1/(a^2+1)</td>
+				 </tr>
+				 <tr>
+					 <td>Rotation in θ degrees</td>
+					 <td>mp+(Xcos(θ)-Ysin(θ))-(Xsin(θ)+Ycos(θ))w</td>
+					 <td>X-Yw = (Xcos(θ)-Ysin(θ))-(Xsin(θ)+Ycos(θ))w</td>
+				 </tr>
+			 </tbody>
+		 </table>
+		</div>
 		<h4 class="section scrollspy">Evaluation</h4>
 		<div id="eval" class="section scrollspy">
-			<p>	<blockquote>This project had been absolutely fantastic. This project provided me an opportunity to learn more JavaScript and beautifully design the website by using css. Moreover, it reinvigorated my mathematical thinking and broad choice of investigation encouraged me to do more and aim higher. Solving mathematical problems throughout the whole project was another little painful fun. However, My time management skills devastated me, because, nothing went according to plan, hence, this week / project was very challenging.
-
+			<p>	<blockquote>This project had been absolutely fantastic. This project provided me an opportunity to learn more JavaScript and beautifully design the website by using css and jquery. Moreover, it reinvigorated my mathematical thinking and broad choice of investigation encouraged me to do more and aim higher. Solving mathematical problems throughout the whole project was another fun. However, My poor time managing skills give a hard time to me, because, mathematical part did not went according to the plan, hence, this week / project was very challenging for me.
+Even though I was panic at the last days of faculty project week, because of the previous knowledge of jquery and javascript truely helped me to finish my project on time.
 In general, I personally enjoyed this project, was a good time to learn and improve my time managing skills. </blockquote> </p>
 		</div>
 	</div>
@@ -334,7 +393,7 @@ In general, I personally enjoyed this project, was a good time to learn and impr
 			<li><a href="#similarity">Similarity Transformation</a></li>
 			<li><a href="#90rot">Rotation (90 degrees)</a></li>
 			<li><a href="#loman">Symmetry/Reflection (y=ax)</a></li>
-			<li><a href="#initialization">Rotation (a degrees / unknown degrees)</a></li>
+			<li><a href="#rota">Rotation (a degrees / unknown degrees)</a></li>
 			<li><a href="#conclusion" class="theme" style="color:#ffca28">Conclusion</a></li>
 			<li><a href="#conc">Conclusion</a></li>
 			<li><a href="#eval">Evaluation</a></li>
