@@ -140,7 +140,7 @@
 <div class="row">
 	<div class="col s8 offset-s1">
 		<h3 style="color:#00bcd4;"><blockquote style="border-left: 8px solid #00bcd4;">Recommended Specifications</blockquote></h3>
-		<ul class="collapsible popout" data-collapsible="accordion">
+		<ul class="collapsible popout z-depth-4" data-collapsible="accordion">
 			<li>
 				<div class="collapsible-header"><i class="material-icons">warning</i>Browsers</div>
       	<div class="collapsible-body"><p>This website is not suitably designed to be run on 'opera', 'firefox', 'internet explorer'. 'google chrome' and 'chromium' are the most recommended to view this page. Please check the video at the bottom of the website, hence you can identify any wrongly presented materials.</p></div>
@@ -436,6 +436,7 @@ $(".button-collapse").sideNav({
 $(document).ready(function(){
 	$('.slider').slider({full_width: true});
 });
+$('#select').material_select();
 //table-of-contents settings
 $(window).scroll(function(){
 $(".fixed > ul").css("top", Math.max(0, 450 - $(this).scrollTop()))
