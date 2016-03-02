@@ -441,6 +441,7 @@ $('#select').material_select();
 $(window).scroll(function(){
 $(".fixed > ul").css("top", Math.max(0, 450 - $(this).scrollTop()))
 });
+$('html, body').animate({ scrollTop: $('#'+$('#search').val()).offset().top }, 'slow');
 // Bar Sprites
 // 10 by 10 grid making code ( below ):
 $table = $('<table>');
