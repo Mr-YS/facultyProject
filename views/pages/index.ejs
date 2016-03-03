@@ -431,7 +431,7 @@ $(document).ready(function(){
 	$('.scrollspy').scrollSpy();
 });
 $(".button-collapse").sideNav({
-	menuWidth : 400
+	menuWidth : 240
 });
 $(document).ready(function(){
 	$('.slider').slider({full_width: true});
@@ -447,7 +447,7 @@ $("#search").keypress(function(event) {
 $(window).scroll(function(){
 $(".fixed > ul").css("top", Math.max(0, 450 - $(this).scrollTop()))
 });
-$('html, body').animate({ scrollTop: $('#'+('#search').val()).offset().top }, 'slow');
+
 // Bar Sprites
 // 10 by 10 grid making code ( below ):
 $table = $('<table>');
