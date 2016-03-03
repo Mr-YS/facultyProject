@@ -437,6 +437,12 @@ $(document).ready(function(){
 	$('.slider').slider({full_width: true});
 });
 $('#select').material_select();
+$("#search").keypress(function(event) {
+	if(event.which == 13) {
+		$('html, body').animate({ scrollTop: $('#'+$('#search').val()).offset().top }, 'slow');
+		$('#search').val("");
+	}
+});
 //table-of-contents settings
 $(window).scroll(function(){
 $(".fixed > ul").css("top", Math.max(0, 450 - $(this).scrollTop()))
