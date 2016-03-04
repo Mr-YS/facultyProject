@@ -177,11 +177,11 @@
 		<form action="#">
  			<h5><blockquote style="border-left:6px solid #ba68c8;">Rows</blockquote></h5>
  			<p class="range-field">
- 				<input value="10" type="range" id="bstrows" min="3" max="20" />
+ 				<input value="10" type="range" id="bstRangeRow" min="3" max="20" />
  			</p>
  			<h5><blockquote style="border-left:6px solid #ba68c8;">Columns</blockquote></h5>
  			<p class="range-field">
- 				<input value="10" type="range" id="bstrows" min="3" max="20" />
+ 				<input value="10" type="range" id="bstRangeCol" min="3" max="20" />
  			</p>
  		</form>
 		<div class="section scrollspy">
@@ -449,8 +449,11 @@ $("#search").keypress(function(event) {
 		$('#search').val("");
 	}
 });
-$("#bstRange").change(function(){
-
+$("#bstRangeRow").change(function(){
+	bstrow = $('#bstRangeRow').val();
+});
+$("#bstRangeCol").change(function(){
+	bstcol = $('#bstRangeCol').val();
 });
 //table-of-contents settings
 $(window).scroll(function(){
@@ -463,9 +466,9 @@ $table = $('<table>');
 $table.attr('id','barSpriteTable');
 $thead = $('<thead>');
 $tbody = $('<tbody>');
-for(var i = 0; i < 10; ++i) {
+for(var i = 0; i < bstrow; ++i) {
 	$tr = $('<tr>');
-	for(var j = 0; j < 10; ++j) {
+	for(var j = 0; j < bstcol; ++j) {
 		$td = $('<td>');
 		$td.attr('id','barSprite_'+i+'_'+j);
 		$tr.append($td);
