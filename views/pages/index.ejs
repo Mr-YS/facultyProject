@@ -451,8 +451,42 @@ $("#search").keypress(function(event) {
 });
 $("#bstRangeRow").change(function(){
 	bstrow = $('#bstRangeRow').val();
+	$table = $('<table>');
+	$table.attr('id','barSpriteTable');
+	$thead = $('<thead>');
+	$tbody = $('<tbody>');
+	for(var i = 0; i < bstrow; ++i) {
+		$tr = $('<tr>');
+		for(var j = 0; j < bstcol; ++j) {
+			$td = $('<td>');
+			$td.attr('id','barSprite_'+i+'_'+j);
+			$tr.append($td);
+			$td.html(i*10+j+1);
+		}
+		$tbody.append($tr);
+	}
+	$table.append($thead);
+	$table.append($tbody);
+	$('#bst').append($table);
 });
 $("#bstRangeCol").change(function(){
+	$table = $('<table>');
+	$table.attr('id','barSpriteTable');
+	$thead = $('<thead>');
+	$tbody = $('<tbody>');
+	for(var i = 0; i < bstrow; ++i) {
+	$tr = $('<tr>');
+	for(var j = 0; j < bstcol; ++j) {
+		$td = $('<td>');
+		$td.attr('id','barSprite_'+i+'_'+j);
+		$tr.append($td);
+		$td.html(i*10+j+1);
+	}
+	$tbody.append($tr);
+	}
+	$table.append($thead);
+	$table.append($tbody);
+	$('#bst').append($table);
 	bstcol = $('#bstRangeCol').val();
 });
 //table-of-contents settings
