@@ -451,7 +451,6 @@ $("#search").keypress(function(event) {
 });
 $("#bstRangeRow").change(function(){
 	bstrow = $('#bstRangeRow').val();
-	$table = $('<table>');
 	$table.attr('id','barSpriteTable');
 	$thead = $('<thead>');
 	$tbody = $('<tbody>');
@@ -467,10 +466,9 @@ $("#bstRangeRow").change(function(){
 	}
 	$table.append($thead);
 	$table.append($tbody);
-	$('#bst').append($table);
 });
 $("#bstRangeCol").change(function(){
-	$table = $('<table>');
+	bstcol = $('#bstRangeCol').val();
 	$table.attr('id','barSpriteTable');
 	$thead = $('<thead>');
 	$tbody = $('<tbody>');
@@ -486,8 +484,6 @@ $("#bstRangeCol").change(function(){
 	}
 	$table.append($thead);
 	$table.append($tbody);
-	$('#bst').append($table);
-	bstcol = $('#bstRangeCol').val();
 });
 //table-of-contents settings
 $(window).scroll(function(){
